@@ -33,45 +33,8 @@
 // logTaskState(0); // Clean Cat Litter has been completed
 // logTaskState(1);
 
-
-
-/* REFACTOR USING OBJECTS */
-
-// function newTask(title, description) {
-//   return task = {
-//     title: title,
-//     description: description,
-//     complete: false,
-//   };
-// }
-
-// // prints out the provided task's details
-// function logTaskState(task) {
-//   console.log(`${task.title} has${task.complete ? " " : " not "}been completed`);
-// }
-
-// // marks the provided task as completed
-// function completeTask(task) {
-//   task.complete = true;
-// }
-
-// DRIVER CODE
-// const task1 = newTask("Clean Cat Litter", "Take all the 💩 out of the litter box");
-// const task2 = newTask("Do laundry", "😨");
-// const tasks = [task1, task2];
-
-// logTaskState(task1); // Clean Cat Litter has not been completed
-// completeTask(task1);
-// logTaskState(task1); // Clean Cat Litter has been completed
-
-// console.log(tasks);
-
-
-
-/* REFACTOR WITH METHODS */
-
 function newTask(title, description) {
-  return task = {
+  const task = {
     title: title,
     description: description,
     complete: false,
@@ -84,6 +47,7 @@ function newTask(title, description) {
       this.complete = true;
     }
   };
+  return task;
 }
 
 // DRIVER CODE
@@ -94,3 +58,4 @@ const tasks = [task1, task2];
 task1.logState();
 task1.markCompleted();
 task1.logState();
+task2.logState();
